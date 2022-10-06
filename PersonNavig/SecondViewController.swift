@@ -14,31 +14,25 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    var text: String?
-    
-    struct Person {
-        var name: String
-        var surname: String
-        var date: Int
-        
-    }
-    var text2 = Person(name: "Vika", surname: "Akhapkina", date: 31)
-    
+    var person: Person?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        settings()
+    }
+    
+    func settings() {
         nameLabel.backgroundColor = .systemGroupedBackground
         surnameLabel.backgroundColor = .systemGroupedBackground
         dateLabel.backgroundColor = .systemGroupedBackground
-        nameLabel.text = text
-        surnameLabel.text = text
-        dateLabel.text = text
+        nameLabel.text = person?.name
+        surnameLabel.text = person?.surname
+        dateLabel.text = person?.date
+        nameLabel.font = .systemFont(ofSize: 25)
+        surnameLabel.font = .systemFont(ofSize: 25)
+        dateLabel.font = .systemFont(ofSize: 25)
         
-        
-
-        // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation
