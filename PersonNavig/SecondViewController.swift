@@ -9,7 +9,6 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
