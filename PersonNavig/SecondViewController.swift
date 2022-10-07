@@ -17,10 +17,10 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        settings()
+        setup()
     }
     
-    func settings() {
+    func setup() {
         nameLabel.backgroundColor = .systemGroupedBackground
         surnameLabel.backgroundColor = .systemGroupedBackground
         dateLabel.backgroundColor = .systemGroupedBackground

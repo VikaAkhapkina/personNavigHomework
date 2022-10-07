@@ -16,10 +16,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        settings()
+        setup()
     }
 
-    func settings() {
+    func setup() {
         nameTextField.placeholder = "Username"
         surnameTextField.placeholder = "Surname"
         dateTextField.placeholder = "Date"
