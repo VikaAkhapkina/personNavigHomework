@@ -25,6 +25,7 @@ class SecondViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
         titleTextField.text = task?.title
         subtitleTextField.text = task?.subtitle
+        
 
         // Do any additional setup after loading the view.
     }
