@@ -7,18 +7,34 @@
 
 import UIKit
 
+protocol SecondViewControllerDelegate: AnyObject {
+    func nameAdded(name: String)
+}
+
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var subtitleTextField: UITextField!
+    
+    weak var delegate: SecondViewControllerDelegate?
+    
+    var task: Task?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        titleTextField.text = task?.title
+        subtitleTextField.text = task?.subtitle
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func titleTextField(_ sender: Any) {
-    }
     
-    @IBAction func subtitleTextField(_ sender: Any) {
+
+    @IBAction func saveButten(_ sender: Any) {
+        guard let name = titleTextField.text, name.count > 0 else { return }
+        delegate?.nameAdded(name: name)
+        navigationController?.popViewController(animated: true)
     }
     /*
     // MARK: - Navigation

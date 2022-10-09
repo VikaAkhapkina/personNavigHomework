@@ -28,7 +28,7 @@
         <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="To_doList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="To_doList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="tX2-br-You" id="nbU-jQ-yPV"/>
+                        <outlet property="tableView" destination="tX2-br-You" id="bxX-HW-jUv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,9 +118,6 @@
                                 <rect key="frame" x="40" y="149" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="titleTextField:" destination="MBk-73-lGR" eventType="editingDidEnd" id="yqn-uA-l4S"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="080-2u-ziy">
                                 <rect key="frame" x="40" y="213" width="334" height="21"/>
@@ -131,15 +128,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1a-CZ-wtI">
                                 <rect key="frame" x="16" y="756" width="382" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveButten:" destination="MBk-73-lGR" eventType="touchUpInside" id="h6z-Qy-gSF"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibS-UJ-LSG">
                                 <rect key="frame" x="40" y="244" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="titleTextField:" destination="MBk-73-lGR" eventType="editingDidEnd" id="liK-ep-mFq"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fZe-VD-Xhl"/>
@@ -166,6 +163,10 @@
                             <constraint firstItem="fZe-VD-Xhl" firstAttribute="trailing" secondItem="ibS-UJ-LSG" secondAttribute="trailing" constant="40" id="qHt-cn-CTu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="subtitleTextField" destination="ibS-UJ-LSG" id="FgF-VD-iRY"/>
+                        <outlet property="titleTextField" destination="lEp-BV-75D" id="Zp4-kg-tCX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFB-k7-kH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
